@@ -1,0 +1,21 @@
+/* Import Tailwind’s base, components, and utilities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Clipboard form styles */
+#clipboard {
+    @apply p-4 border border-gray-200 rounded-lg max-w-lg mx-auto bg-gray-50;
+}
+
+#clipboard div {
+    @apply mb-4;
+}
+
+#clipboard label {
+    @apply block font-semibold mb-2 text-gray-700;
+}
+
+#clipboard input {
+    @apply w-full p-2 border border-gray-300 rounded-md focus:border-blue-500 focus:ring focus:ring-blue-200 focus:outline-none;
+}

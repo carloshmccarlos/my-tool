@@ -1,0 +1,59 @@
+/* Import Tailwind’s base styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add custom styles here */
+.root-links-container {
+    padding: 1rem;
+    background-color: #f9fafb; /* Light gray background */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow */
+    transition: transform 0.3s ease; /* Smooth transform transition */
+}
+
+.root-links-container:hover {
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.root-links-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.root-links-list-item {
+    margin-bottom: 0.75rem; /* Increased spacing between items */
+}
+
+.root-links-link {
+    color: #3b82f6; /* Tailwind's blue-500 */
+    text-decoration: none;
+    padding: 0.5rem 1rem; /* Padding for clickable area */
+    border-radius: 0.25rem; /* Rounded corners */
+    display: inline-block; /* Makes the padding and background work */
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    position: relative; /* For pseudo-element positioning */
+}
+
+.root-links-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: #3b82f6; /* Tailwind's blue-500 */
+    transform: scaleX(0);
+    transition: transform 0.3s ease; /* Smooth transition for underline */
+}
+
+.root-links-link:hover {
+    color: #1d4ed8; /* Tailwind's blue-700 */
+    background-color: rgba(59, 130, 246, 0.1); /* Light blue background on hover */
+    text-decoration: none; /* Remove default underline */
+}
+
+.root-links-link:hover::before {
+    transform: scaleX(1); /* Scale underline on hover */
+}

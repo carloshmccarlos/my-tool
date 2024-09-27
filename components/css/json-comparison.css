@@ -1,0 +1,12 @@
+.first {
+    object-position: left;
+}
+.second {
+    object-position: right;
+}
+.button{
+    object-position: bottom;
+}
+.first-input {
+    object-position: left;
+}
