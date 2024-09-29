@@ -21,6 +21,13 @@ export function JsonComparison() {
         }
     };
 
+    function handleClear(){
+        setJson1('');
+        setJson2('');
+        setHighlightedJson1('');
+        setHighlightedJson2('');
+    }
+
     const highlightDifferences = (obj1, obj2) => {
         const allKeys = new Set([...Object.keys(obj1), ...Object.keys(obj2)]);
         let jsonString = JSON.stringify(obj1, null, 2); // Pretty-print the JSON string
@@ -31,16 +38,13 @@ export function JsonComparison() {
 
             // If the key is missing from one object, color the key and value blue
             if (!(key in obj1) || !(key in obj2)) {
-                const keyRegex = new RegExp(`("${key}")`, 'g');
-                jsonString = jsonString.replace(keyRegex, `<span style="color: blue;">$1</span>`);
-
                 const valueRegex = new RegExp(`("${key}":\\s*)(${JSON.stringify(value1)})`, 'g');
-                jsonString = jsonString.replace(valueRegex, `$1<span style="color: blue;">$2</span>`);
+                jsonString = jsonString.replace(valueRegex, `<span style="color: blue;">$1$2</span>`);
             } else {
                 // If values are different, color the value orange
                 if (JSON.stringify(value1) !== JSON.stringify(value2)) {
                     const valueRegex = new RegExp(`("${key}":\\s*)(${JSON.stringify(value1)})`, 'g');
-                    jsonString = jsonString.replace(valueRegex, `$1<span style="color: orange;">$2</span>`);
+                    jsonString = jsonString.replace(valueRegex, `<span style="color: orange;">$1$2</span>`);
                 }
             }
         });
@@ -50,7 +54,7 @@ export function JsonComparison() {
     };
 
     return (
-        <div >
+        <div>
             <div className={'first'}>
                 <label htmlFor="json1">
                     Your First JSON String
@@ -60,7 +64,7 @@ export function JsonComparison() {
                     style={{whiteSpace: 'pre-wrap', wordWrap: 'break-word'}}
                     contentEditable={true}
                     onInput={(e) => setJson1(e.currentTarget.textContent)}
-                    dangerouslySetInnerHTML={{ __html: highlightedJson1 || json1 }}
+                    dangerouslySetInnerHTML={{__html: highlightedJson1 || json1}}
                     className={'first'}
                 />
             </div>
@@ -74,7 +78,7 @@ export function JsonComparison() {
                     style={{whiteSpace: 'pre-wrap', wordWrap: 'break-word'}}
                     contentEditable={true}
                     onInput={(e) => setJson2(e.currentTarget.textContent)}
-                    dangerouslySetInnerHTML={{ __html: highlightedJson2 || json2 }}
+                    dangerouslySetInnerHTML={{__html: highlightedJson2 || json2}}
                 />
             </div>
             <button
@@ -82,6 +86,12 @@ export function JsonComparison() {
                 onClick={handleCompare}
             >
                 Compare
+            </button>
+            <button
+                className={'button'}
+                onClick={handleClear}
+            >
+                Clear
             </button>
 
             {/*<div className="mt-4">*/}

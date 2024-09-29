@@ -1,0 +1,83 @@
+
+{
+	"token": "-frZr-jjzpeO5pILfamFRt_MbEEJOQDnPUFAe2AkAQQkzDtOBjEMAOG7TG39shMnsd3Scwcey6MJEohqxd3RQjsafSdbKfpNb4qwjTJhN8pUVYXdKVsjm8eMEd1d2H617stjZQp7UNzdIzxQIDxSLcyXZ_ZcOtYUnikL4aBOvj6-P58OSn-El8tqM1f7s14pLGZLtRYaCG__5vu1_wYAAP__",
+	"platform": "app",
+	"lang": "zh-CN",
+	"referrer": "",
+	"custom_type": 1,
+	"page_name": "accept_center_submit",
+	"source": "app_ddcx_xcjsygdwt_kfcp",
+	"app_id": 10000,
+	"channel": 10,
+	"business_type": 121,
+	"oid": "TWpreE9ESXlORGczTmpVME1qQXhPVEE0",
+	"tag_l1": null,
+	"tag_l2": null,
+	"dict_id": null,
+	"kefu_scene_id": "",
+	"trace_id": "e4978b29-347f-4aa3-9dac-74ff3399c4ea",
+	"kefu_scene_title": "",
+	"from_page": "kefu_center_selfservice",
+	"help_id": "",
+	"user_contents": [{
+		"item_id": "x0005",
+		"item_label": "",
+		"item_key": "collapse_mutli_select",
+		"item_type": "array",
+		"item_value": [{
+			"dict_id": 619152,
+			"sub_id": "five1",
+			"sub_label": "车内抽烟"
+		}]
+	}, {
+		"item_id": "x00004",
+		"item_label": "",
+		"item_key": "content",
+		"item_type": "string",
+		"item_value": "司机车内抽烟空气差"
+	}],
+	"forecast_count": 1,
+	"accept_scene": "30021",
+	"user_offline_pay_status": null,
+	"is_new_complaint": null,
+	"uniq_key": "9874d521-308a-4a57-9cad-4597a4e81d26",
+	"assign_compensate_amount": null,
+	"product_line": "wyc"
+}
+
+
+
+
+
+{
+	"token": "t6hbgUOYK0WWb5WJzylpPRtk98BZbX84DAATVy7wU80kzDlOBTEQhsG7fHHr6W_b7aVvwzIsiZFARKO5O0ITVVYnWyT1oYcwtpNu7ELWkJaxK-kjVq0tVH2WbuxGythBgvF080yW2dZcmk1amjJeyV6Ngzz5-fr9fjnIkLQu4-0_LsNHzHDjncSjL81wHx3j434_SV1_AQAA__8",
+	"platform": "wxMini",
+	"lang": "zh-CN",
+	"referrer": "",
+	"custom_type": 1,
+	"page_name": "accept_center_submit",
+	"source": "xcx_ddcx_efkfc_im",
+	"channel": 10,
+	"business_type": 7,
+	"oid": "TlRjNE9USTFNalV6TURnd01URTNNREk0",
+	"tag_l1": 2,
+	"tag_l2": 1007,
+	"dict_id": 2717,
+	"kefu_scene_id": "72057594058153504",
+	"trace_id": "op-c81bd535-7a64-11ef-8bf5-debf04b31e12",
+	"from_page": "kefu_chatbot_to_selfservice_default_success",
+	"help_id": "72057594058153504",
+	"user_contents": [{
+		"item_id": "x00004",
+		"item_label": "",
+		"item_key": "content",
+		"item_type": "string",
+		"item_value": "没有产生停车费拒绝支付"
+	}],
+	"forecast_count": 1,
+	"user_offline_pay_status": null,
+	"is_new_complaint": null,
+	"uniq_key": "45739d68-f0b8-42f2-9e45-0b2c1849bd9d",
+	"assign_compensate_amount": null,
+	"product_line": "wyc"
+}
